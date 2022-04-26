@@ -34,7 +34,7 @@ def main(myblob: func.InputStream):
     key = os.environ["AZURE_FORM_RECOGNIZER_KEY"]
 
     # sample document
-    docUrl = myblob.uri #"https://testadmissions.blob.core.windows.net/test/alex_form_en.jpg"
+    #docUrl = myblob.uri #"https://testadmissions.blob.core.windows.net/test/alex_form_en.jpg"
 
     # create your `DocumentAnalysisClient` instance and `AzureKeyCredential` variable
     document_analysis_client = DocumentAnalysisClient(endpoint=endpoint, credential=AzureKeyCredential(key))
@@ -42,9 +42,11 @@ def main(myblob: func.InputStream):
     #with open(path_to_sample_documents, "rb") as f:
     #    poller = document_analysis_client.begin_analyze_document(
     #        "prebuilt-document", document=f)
-    
-    poller = document_analysis_client.begin_analyze_document_from_url(
-            "prebuilt-document", docUrl)
+    body = myblob.read()
+    poller = document_analysis_client.begin_analyze_document(
+        "prebuilt-document", document=body)
+    #poller = document_analysis_client.begin_analyze_document_from_url(
+    #        "prebuilt-document", docUrl)
     result = poller.result()
 
     print("----Key-value pairs found in document----")
