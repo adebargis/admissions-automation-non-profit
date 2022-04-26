@@ -30,8 +30,8 @@ def main(myblob: func.InputStream):
     #)
     #path_to_sample_documents=r'C:\Users\adebargis\GitHub\admissions-automation-non-profit\BlobTriggerFormExtraction\alex_jpg.jpg'
     
-    endpoint = "https://admissions-process.cognitiveservices.azure.com/"
-    key = "d3ce9805bfb44f06a3396d80193dcea0"
+    endpoint = os.environ["AZURE_FORM_RECOGNIZER_ENDPOINT"]
+    key = os.environ["AZURE_FORM_RECOGNIZER_KEY"]
 
     # sample document
     docUrl = myblob.uri #"https://testadmissions.blob.core.windows.net/test/alex_form_en.jpg"
