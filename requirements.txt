@@ -3,12 +3,10 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-logging
-BlobServiceClient
+azure-storage-blob
+azure-identity
 requests
-os
-collections
 numpy
 pandas
-azure.ai.formrecognizer
-azure.core.credentials
+azure-ai-formrecognizer==3.2.0b4
+azure-core
