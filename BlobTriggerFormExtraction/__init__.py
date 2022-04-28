@@ -48,7 +48,7 @@ def main(myblob: func.InputStream):
     #poller = document_analysis_client.begin_analyze_document_from_url(
     #        "prebuilt-document", docUrl)
     result = poller.result()
-    print(result)
+    #print(result)
 
     print("----Key-value pairs found in document----")
     for kv_pair in result.key_value_pairs:
