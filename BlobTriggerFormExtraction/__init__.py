@@ -1,16 +1,7 @@
 import logging
-from azure.storage.blob import BlobServiceClient
 import azure.functions as func
 import json
 import time
-import requests
-from requests import get, post
-import os
-from collections import OrderedDict
-import numpy as np
-import pandas as pd
-import logging
-import azure.functions as func
 import os
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
