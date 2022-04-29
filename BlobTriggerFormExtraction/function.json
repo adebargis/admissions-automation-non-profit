@@ -6,7 +6,7 @@
       "type": "blobTrigger",
       "direction": "in",
       "path": "test/{name}",
-      "connection": "testadmissions_STORAGE"
+      "connection": "inputdata_STORAGE"
     }
   ]
 }
