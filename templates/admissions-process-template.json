@@ -291,7 +291,7 @@
                 "reserved": true,
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ASP_admissionsprocess_name'))]",
                 "siteConfig": {          
-                "linuxFxVersion": "python|3.9",
+                "linuxFxVersion": "PYTHON|3.9",
                 "appSettings": [
                     {
                     "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
@@ -308,6 +308,10 @@
                     {
                     "name": "FUNCTIONS_EXTENSION_VERSION",
                     "value": "~4"
+                    },
+                    {
+                    "name": "FUNCTIONS_WORKER_RUNTIME",
+                    "value": "python"
                     },
                     {
                     "name": "AZURE_FORM_RECOGNIZER_ENDPOINT",
