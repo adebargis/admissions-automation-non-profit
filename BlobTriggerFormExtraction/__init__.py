@@ -1,9 +1,7 @@
 import uuid
 import logging
-from turtle import done
 import azure.functions as func
 import json
-import time
 import os
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
